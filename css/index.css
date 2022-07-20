@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+:root {
+ --cor1: #007519;
+ --cor2: #4AF76F;
+ --cor3: #01F534;
+ --cor4: #237535;
+ --cor5: #00C22A;
+
+}
+
+.bnavegacao {
+    background-image: linear-gradient(2deg, var(--cor1), rgba(0, 0, 0, 0.555) 60%);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.644);
+}
+
+.row {
+    max-width: 100%;
+}
+.links_nav {
+    align-items: center;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--cor3);
+}
+
+.bnavegacao a:hover {
+    color: var(--cor1);
+}
+
+.principal {
+    height: 90vh;
+}
+
+
+.texto-principal {
+    position: relative;    
+}
+
+.texto-principal > p {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+}
+
+#sobre {
+    background-color: var(--cor2);
+}
+
+#sobre img {
+    margin: auto;
+    border-radius: 50%;
+    text-shadow: 1px 1px 1px black;
+    display: table;
+    height: 95%;
+    min-height: 250px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.575);
+}
+
+#que-sou-eu {
+    line-height: 1.7em;
+    font-size: 1.1em !important;
+    font-weight: 600;
+    text-align: justify;   
+}
+
+
+@media (max-width: 1246px) {
+    .ajust {
+        width: 100%;
+    }
+    .ajust-foto {
+        width: 100%;
+    }
+
+}
+
+
+
+#que-sou-eu strong {
+    font-weight: 700;   
+}
+ 
+#tecnologias {
+    position: relative;
+    background-image: linear-gradient(178deg, var(--cor2), var(--cor3));
+    height: 500px;
+}
+
+#tecnologias img {
+    position: absolute;
+    width: 75px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media (max-width: 900px) {
+    .minha-foto {
+        width: 100px !important;
+        top: 60px;
+        left: 50%;
+    }
+    .l-1 {
+        position: absolute;
+        background-color: black;
+        width: 4px;
+        height: 100px;
+        top: 105px;
+        left: 50%;
+    
+    }
+    .f-python {
+        filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+        width: 80px !important;
+        top: 210px;
+        left: 50%;
+    }
+    
+    .f-python:active {
+        width: 75px !important;
+        filter: unset;
+    }
+    
+    .l-2 {
+        position: absolute;
+        background-color: black;
+        width: 4px;
+        height: 100px;
+        top: 225px;
+        left: 50%;
+    }
+    .f-html  {
+        filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+        top: 355px;
+        left: 50%;
+    }
+    
+    .f-html:active {
+        width: 70px !important;
+        filter: unset;
+    }
+    .l-3 {
+        border: 5px solid black;
+        border-radius: 35%;
+        border-left: unset;
+        border-right: unset;
+        border-bottom: unset;
+        height: 272px;
+        width: 300px;
+        top: 410px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    
+    
+    .f-javascript {
+        filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+        top: 355px;
+        left: 66%;
+    }
+    
+    .f-javascript:active {
+        width: 70px !important;
+        filter: unset;
+    }
+    
+    .f-css {
+        filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+        top: 355px;
+        left: 33%;
+    }
+    
+    .f-css:active {
+        width: 70px !important;
+        filter: unset;
+    }
+
+}
+
+
+@media (min-width: 900px){
+    
+.minha-foto {
+    width: 100px !important;
+    top: 250px;
+    left: 55px;
+}
+.l-1 {
+    position: absolute;
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    top: 250px;
+    left: 60px;
+
+}
+.f-python {
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+    width: 80px !important;
+    top: 250px;
+    left: 190px;
+}
+
+.f-python:active {
+    width: 75px !important;
+    filter: unset;
+}
+
+.l-2 {
+    position: absolute;
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    top: 250px;
+    left: 215px;
+
+}
+.f-html  {
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+    top: 250px;
+    left: 340px;
+}
+
+.f-html:active {
+    width: 70px !important;
+    filter: unset;
+}
+.l-3 {
+    border: 5px solid black;
+    border-radius: 31%;
+    border-right: unset;
+    border-top: unset;
+    border-bottom: unset;
+    height: 272px;
+    width: 224px;
+    top: 110px;
+    left: 274px;
+    position: absolute;
+}
+
+.f-javascript {
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+    top: 100px;
+    left: 345px;
+}
+
+.f-javascript:active {
+    width: 70px !important;
+    filter: unset;
+}
+
+.f-css {
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+    top: 400px;
+    left: 340px;
+}
+
+.f-css:active {
+    width: 70px !important;
+    filter: unset;
+}
+}
+
+
+.link{ display: none !important;}
