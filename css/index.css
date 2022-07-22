@@ -75,14 +75,35 @@ body {
     text-align: justify;   
 }
 
+.ajust {
+    
+    overflow: hidden;
+    position: relative;
+}
+
 .marca-texto {
-    position: fixed;
-    top: 52vh;
-    right: 0vw;
-    background-color: red;
+    position: absolute;
+    top: 10vh;
+    right: -2vw;
+    background-image: linear-gradient(90deg, var(--cor1), var(--cor3));
     width: 100px;
     height: 100px;
     cursor: grab;
+    border-radius: 50% 0px 0px 50%;
+}
+
+.corpo-marcacao {
+    margin-left: 60px;
+    background-image: linear-gradient(90deg, var(--cor1), var(--cor3));
+    height: 100px;
+    width: 250vh;
+}
+
+.p-branca {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    border-radius: 50% 0px 0px 50%;
 }
 
 @media (max-width: 1246px) {

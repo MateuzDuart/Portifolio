@@ -19,14 +19,15 @@ function pegar_marca_texto() {
     marca_texto.addEventListener('touchmove', posicao_mouse)
     marca_texto.addEventListener('mouseup', solta_marca_texto)
     marca_texto.addEventListener('touchend', solta_marca_texto)
-    corpo.style.overflow = 'hidden'
     function posicao_mouse(e) {
         var x = e.clientX - 50 + 'px'
         if (x == 'NaNpx') {
-            x = e.changedTouches[0].clientX - 50 + 'px'
-            var y = e.changedTouches[0].clientY - 50 + 'px'
+            corpo.style.overflow = 'hidden'
+            x = e.changedTouches[0].clientX - 370 + 'px'
+            var y = e.changedTouches[0].clientY - 135 + 'px'
         } else {
-        var y = e.clientY - 50 + 'px'
+            x = e.clientX - 370 + 'px'
+            var y = e.clientY - 135 + 'px'
         }
         this.style.left = x
         this.style.top = y
