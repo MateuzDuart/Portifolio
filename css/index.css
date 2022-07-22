@@ -268,4 +268,35 @@
 }
 
 
-.link{ display: none !important;}
+.carousel-item {
+    height: 500px;
+}
+
+.caixa-linha {
+    min-width: 1300px;
+    height: 100%;
+    margin: 0;
+}
+
+.caixa-projeto {
+    margin-top: 10vmin !important;
+    background-color: white;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+
+}
+
+@media (max-width: 767px) {
+    .caixa-projeto {
+        margin-top: 10% !important;
+        background-color: white;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+
+    .carousel-item {
+        height: unset;
+    }
+}
