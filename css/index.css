@@ -9,6 +9,10 @@
 
 }
 
+body {
+    position: unset;
+}
+
 .bnavegacao {
     background-image: linear-gradient(2deg, var(--cor1), rgba(0, 0, 0, 0.555) 60%);
     border-radius: 0px 0px 10px 10px;
@@ -35,6 +39,9 @@
     height: 90vh;
 }
 
+#sobre, #tecnologias, #projetos{
+    visibility: hidden;
+}
 
 .texto-principal {
     position: relative;    
@@ -68,6 +75,15 @@
     text-align: justify;   
 }
 
+.marca-texto {
+    position: fixed;
+    top: 52vh;
+    right: 0vw;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    cursor: grab;
+}
 
 @media (max-width: 1246px) {
     .ajust {

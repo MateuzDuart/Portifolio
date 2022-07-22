@@ -1,2 +1,2 @@
 # Portifolio
- esse é meu site vitrine aonde voçe pode ver todos od meus trabalhos
+ esse é meu site vitrine aonde voçe pode ver todos os meus trabalhos
