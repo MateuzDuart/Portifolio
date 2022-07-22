@@ -24,10 +24,10 @@ function pegar_marca_texto() {
         if (x == 'NaNpx') {
             corpo.style.overflow = 'hidden'
             x = e.changedTouches[0].clientX - 30 + 'px'
-            var y = e.changedTouches[0].clientY - 300 + 'px'
+            var y = e.changedTouches[0].clientY - 500 + 'px'
         } else {
             x = e.clientX - 550 + 'px'
-            var y = e.clientY - 180 + 'px'
+            var y = e.clientY - 250 + 'px'
         }
         this.style.left = x
         this.style.top = y
