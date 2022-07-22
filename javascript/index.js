@@ -23,11 +23,11 @@ function pegar_marca_texto() {
         var x = e.clientX - 50 + 'px'
         if (x == 'NaNpx') {
             corpo.style.overflow = 'hidden'
-            x = e.changedTouches[0].clientX - 370 + 'px'
-            var y = e.changedTouches[0].clientY - 135 + 'px'
+            x = e.changedTouches[0].clientX - 30 + 'px'
+            var y = e.changedTouches[0].clientY - 300 + 'px'
         } else {
-            x = e.clientX - 370 + 'px'
-            var y = e.clientY - 135 + 'px'
+            x = e.clientX - 550 + 'px'
+            var y = e.clientY - 180 + 'px'
         }
         this.style.left = x
         this.style.top = y
@@ -35,6 +35,7 @@ function pegar_marca_texto() {
 
     function solta_marca_texto() {
         corpo.style.overflow = 'unset'
+        this.style.right = '70vw !mportant'
         marca_texto.removeEventListener('mousemove', posicao_mouse)
         marca_texto.removeEventListener('a',posicao_mouse)
     }
