@@ -4,13 +4,15 @@ ScrollReveal().reveal('#tecnologias', { delay: 250 })
 ScrollReveal().reveal('#projetos', { delay: 250 })
 
 var marca_texto = document.querySelector('.marca-texto')
+var sesao_sobre = document.querySelector('.sobre')
 var corpo = document.body
 
+sesao_sobre.addEventListener('onmouseover', apresentar_elemento)
 marca_texto.addEventListener('mousedown', pegar_marca_texto)
 marca_texto.addEventListener('touchstart', pegar_marca_texto)
 
-function trocar_cor(e) {
-    console.log()
+function apresentar_elemento() {
+    marca_texto.style.display = 'none'
 }
 
 function pegar_marca_texto() {
@@ -20,6 +22,7 @@ function pegar_marca_texto() {
     marca_texto.addEventListener('mouseup', solta_marca_texto)
     marca_texto.addEventListener('touchend', solta_marca_texto)
     function posicao_mouse(e) {
+        console.log(e)
         var x = e.clientX - 50 + 'px'
         if (x == 'NaNpx') {
             corpo.style.overflow = 'hidden'
