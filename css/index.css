@@ -97,6 +97,10 @@ body {
     transform: translateX(55px);
 }
 
+.marca-texto:active {
+    cursor: grabbing;
+}
+
 @keyframes slide-marca-texto {   
     to {
         opacity: 1;
@@ -141,8 +145,6 @@ body {
     }
 
 }
-
-
 
 #que-sou-eu strong {
     font-weight: 700;   
