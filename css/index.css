@@ -156,7 +156,7 @@ body {
     height: 500px;
 }
 
-#tecnologias img {
+#tecnologias .f-tecnologia {
     position: absolute;
     width: 75px;
     transform: translate(-50%, -50%);
@@ -431,4 +431,60 @@ body {
 .descricao {
     text-align: justify;
     color: white;
+}
+
+.area3d {
+    position: absolute;
+    width: 100%;
+    transform: translate(-100%, -50%);
+    top: 50%;
+    left: 100%;
+}
+
+.area3d:active {
+    animation-name: e-para-d;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.area3d:active .informacao {
+    animation-name: puxar;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes e-para-d {
+    to {
+        width: 0%;
+    }    
+}
+
+@keyframes puxar {
+    to {
+        transform: rotateY(80deg); 
+    }    
+}
+
+.informacao {
+    overflow: hidden;
+    width: unset !important;
+    transform-style: preserve-3d;
+    /* transform: rotateY(10deg); */
+    background-color: var(--cor2);
+    font-size: 1.5em;
+    padding: 20px;
+    background-image: url('https://i.pinimg.com/736x/81/68/73/8168730f928cfcfa347f3e5e3d6b3728.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.linha-info {
+    min-width: 100vw;
+}
+
+.informacao img {
+    width: 100%;
 }
