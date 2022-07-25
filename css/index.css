@@ -151,6 +151,7 @@ body {
 }
  
 #tecnologias {
+    overflow: hidden;
     position: relative;
     background-image: linear-gradient(178deg, var(--cor2), var(--cor3));
     height: 500px;
@@ -439,37 +440,41 @@ body {
     transform: translate(-100%, -50%);
     top: 50%;
     left: 100%;
-}
-
-.area3d:active {
-    animation-name: e-para-d;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-.area3d:active .informacao {
-    animation-name: puxar;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+
+@keyframes puxar-info {
+    from {
+        width: 0%;
+        left: 110%;
+    }
+    to {
+        left: 100%;
+        width: 100%;
+    }
 }
 
 @keyframes e-para-d {
     to {
         width: 0%;
-    }    
+        left: 110%;
+    }
 }
 
 @keyframes puxar {
     to {
-        transform: rotateY(80deg); 
+        transform: rotate3d(0, 0, 1, 60deg);
     }    
 }
 
 .informacao {
+    display: none;
+    animation-duration: 2s;
     overflow: hidden;
     width: unset !important;
     transform-style: preserve-3d;
-    /* transform: rotateY(10deg); */
     background-color: var(--cor2);
     font-size: 1.5em;
     padding: 20px;
@@ -480,9 +485,9 @@ body {
 }
 
 
-
 .linha-info {
-    min-width: 100vw;
+    text-align: justify;
+    min-width: 98vw;
 }
 
 .informacao img {
