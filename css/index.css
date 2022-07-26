@@ -265,6 +265,23 @@ body {
         left: 25vw;
     }
 
+    .f-react {
+       width: 50px !important;
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.511));
+    top: 441px;
+    left: 78vw;
+    }
+    
+    .l-5 {
+        transform: rotateZ(51deg);
+        position: absolute;
+        background-color: black;
+        width: 100px;
+        height: 4px;
+        top: 403px;
+        left: 68.4vw;
+    }
+
     @media (max-width: 600px) {
         .l-3 {
             width: 62vw;
@@ -283,6 +300,22 @@ body {
             top: 345px;
             left: 14vw;
         }
+        .f-react {
+            width: 50px !important;
+         filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.511));
+         top: 441px;
+         left: 89vw;
+         }
+         
+         .l-5 {
+             transform: rotateZ(51deg);
+             position: absolute;
+             background-color: black;
+             width: 100px;
+             height: 4px;
+             top: 403px;
+             left: 75vw;
+         }
     }
 
 }
@@ -357,6 +390,23 @@ body {
 .f-tecnologia:active {
     width: 70px !important;
     filter: unset;
+}
+
+.f-react {
+    width: 50px !important;
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.511));
+    top: 36px;
+    left: 444px;
+}
+
+.l-5 {
+    transform: rotateZ(153deg);
+    position: absolute;
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    top: 55px;
+    left: 353px;
 }
 
 .f-css {
@@ -644,6 +694,31 @@ body {
 
 
 footer {
+    font-size: 1.1em;
+    color: rgb(24, 23, 23);
     background-image: linear-gradient(90deg, var(--cor1),var(--cor3),var(--cor2),var(--cor5),var(--cor4));
-    height: 250px;
+    height: 200px;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.479);
+}
+
+footer a {
+    display: unset !important;
+}
+
+footer img {
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.548));
+    margin: 10px;
+    width: 50px;
+    transition: 0.1s;
+}
+
+footer img:active {
+
+    filter: unset;
+    width: 40px;
+}
+.copy {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.658);
 }
