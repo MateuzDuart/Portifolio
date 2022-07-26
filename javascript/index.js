@@ -2,6 +2,12 @@ window.sr = ScrollReveal({reset: true})
 ScrollReveal().reveal('#sobre', { delay: 250 })
 ScrollReveal().reveal('#tecnologias', { delay: 250 })
 ScrollReveal().reveal('#projetos', { delay: 250 })
+VanillaTilt.init(document.querySelectorAll(".f-tecnologia"), {
+    max: 30,
+    reverse: true,
+    scale: 1.1
+})
+
 
 var marca_texto = document.querySelector('.marca-texto')
 var sesao_sobre = document.querySelector('#sobre')
@@ -101,7 +107,12 @@ function mostrar_info(e) {
             for (let i = 0 ; i < filhos_area3d.length; i++){
                 filhos_area3d.item(i).style.display = 'none'
             }
-            elem_info.style.display = 'block'
+            try {
+                elem_info.style.display = 'block'
+            } catch {
+                mostrando = false
+                return 'elemento nao tem informação'
+            }
             areas3d.forEach(function(elemento){
                 elemento.style.animationName = 'puxar-info'
             })

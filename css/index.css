@@ -160,12 +160,14 @@ body {
 #tecnologias .f-tecnologia {
     position: absolute;
     width: 75px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) ;
 }
 
 
-
 @media (max-width: 900px) {
+    #tecnologias {
+        overflow-y: auto;
+    }
     .minha-foto {
         width: 100px !important;
         top: 60px;
@@ -247,6 +249,22 @@ body {
         filter: unset;
     }
 
+    .f-bootstrap {
+        filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.411));
+        top: 445px;
+        left: 21vw;
+        width: 55px !important;
+    }
+    .l-4 {
+        transform: rotateZ(44deg);
+        position: absolute;
+        background-color: black;
+        width: 4px;
+        height: 97px;
+        top: 345px;
+        left: 25vw;
+    }
+
     @media (max-width: 600px) {
         .l-3 {
             width: 62vw;
@@ -256,6 +274,14 @@ body {
         }
         .f-javascript {
             left: 76vw;
+        }
+        .f-bootstrap {
+            top: 445px;
+            left: 8vw;
+        }
+        .l-4 {
+            top: 345px;
+            left: 14vw;
         }
     }
 
@@ -328,7 +354,7 @@ body {
     left: 345px;
 }
 
-.f-javascript:active {
+.f-tecnologia:active {
     width: 70px !important;
     filter: unset;
 }
@@ -339,10 +365,24 @@ body {
     left: 340px;
 }
 
-.f-css:active {
-    width: 70px !important;
-    filter: unset;
+
+.f-bootstrap {
+    width: 45px !important;
+    filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.511));
+    top: 447px;
+    left: 425px;
 }
+
+.l-4 {
+    transform: rotateZ(28deg);
+    position: absolute;
+    background-color: black;
+    width: 100px;
+    height: 4px;
+    top: 426px;
+    left: 319px;
+}
+
 }
 
 
@@ -484,12 +524,126 @@ body {
     background-position: center center;
 }
 
-
 .linha-info {
     text-align: justify;
     min-width: 98vw;
 }
 
+.caixa-img {
+    position: relative;
+}
+
 .informacao img {
+    position: absolute;
+    transform: translate(-10%, -50%);
     width: 100%;
+    filter: drop-shadow(3px 2px 6px black);
+    animation-name: flutuar;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+
+.informacao span {
+    color: rgba(0, 0, 0, 0.705);
+    font-size: 0.8em;
+    display: block;
+    margin: 20px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .area3d {
+        overflow-y: scroll;
+        max-height: 75vh;
+    }
+    .informacao img {
+        transform: translate(-51%, -50%);
+        width: 225%;
+        max-width: 80px;
+        animation-name: flutuar1;
+    }
+    @keyframes flutuar1 {
+        50% {
+            transform: translate(-45%, -53%);
+        }
+    
+        100% {
+            transform: translate(-51%, -50%);
+        }
+    }
+    .informacao img:active {
+        
+        width: 225%;
+        filter: unset;
+    }
+    @keyframes e-para-d {
+        90% {
+            width: 0%;
+            left: 110%;
+            top: 100%;
+        }
+
+        100% {
+            left: 1500%;
+            display: none;
+        }
+    }
+    .informacao p {
+        text-align: justify;
+        padding-right: 25px;
+    }
+}
+
+
+
+.informacao img:hover {
+    width: 110%;
+    cursor: pointer;
+}
+
+.informacao img:active {
+    width: 90%;
+    filter: unset;
+}
+
+@keyframes flutuar {
+
+    50% {
+        transform: translate(-7%, -53%);
+    }
+
+    100% {
+        transform: translate(-10%, -50%);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-image: linear-gradient(90deg, var(--cor1),var(--cor3),var(--cor2),var(--cor5),var(--cor4));
+    height: 250px;
 }
