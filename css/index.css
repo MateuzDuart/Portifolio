@@ -154,7 +154,15 @@ body {
     overflow: hidden;
     position: relative;
     background-image: linear-gradient(178deg, var(--cor2), var(--cor3));
-    height: 500px;
+    /* height: 500px; */
+}
+
+#svg {
+    width: 300px;
+}
+
+#li1 {
+    stroke: blue;
 }
 
 #tecnologias .f-tecnologia {
@@ -304,7 +312,7 @@ body {
             width: 50px !important;
          filter: drop-shadow( 5px 5px 5px rgba(0, 0, 0, 0.511));
          top: 441px;
-         left: 93%;
+         left: 93%z';
          }
          
          .l-5 {
