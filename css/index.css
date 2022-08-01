@@ -63,11 +63,12 @@ i {
     cursor: default;
 }
 
-i:hover {
+i:hover, i:active{
     transition: 0s;
     color: var(--cor3);
     text-shadow: 0px 0px 120px #01F534;
 }
+
 
 .linha div {
     animation: move_pro_lado 20s linear infinite;
@@ -76,7 +77,6 @@ i:hover {
 .linha:nth-child(even) div {
     animation: move_pro_outro_lado 20s linear infinite;
 }
-
 
 
 @keyframes move_pro_lado {
@@ -124,18 +124,51 @@ i:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 270px;
     background: rgba( 255, 255, 255, 0.35 );
-    box-shadow: 0 8px 32px 0 #4AF76F30;
     backdrop-filter: blur( 4.5px );
     -webkit-backdrop-filter: blur( 4.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     pointer-events: none;
+    animation: acender 5s 11s normal forwards;
+}
+
+@keyframes acender {
+    0% {
+        box-shadow: unset;
+    }
+
+    10% {
+        box-shadow: 0 8px 32px 0 #4af770;
+    }
+
+    30% {
+        box-shadow: 0 8px 32px 0 #4af77000;
+    }
+
+    40% {
+        box-shadow: 0 8px 32px 0 #4af770;
+    }
+
+    60% {
+        box-shadow: 0 8px 32px 0 #4af77000;
+    }
+
+    70% {
+        box-shadow: 0 8px 32px 0 #4af770;
+    }
+
+    100% {
+        box-shadow: 0 8px 32px 0 #4AF76F30;
+    }
 }
 
 .vidro p {
+    display: flex;
+    flex-direction: column;
     color: #212529;
     line-height: normal;
     text-align: center;
@@ -145,23 +178,56 @@ i:hover {
 }
 
 .vidro span {
-    display: block;
+    flex-direction: row;
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .f1 {
     font-size: 120%;
+    animation: piscar 2s ease-in 2 forwards, digitacao 2s steps(40) 2s normal forwards;
+    width: 0%;
+    border-right: 1px solid white;
 }
 
 .f2 {
     font-size: 80%;
+    animation: piscar 2s ease-in 3.5s 1 forwards, digitacao 2s steps(40) 4s normal forwards;
+    width: 0%;
+
 }
 .f3 {
     font-size: 150%;
     color: #111214;
+    animation: piscar 2s ease-in 5s 2 forwards, digitacao 2s steps(40) 5s normal forwards;
+    width: 0%;
 }
 .f4 {
     font-size: 80%;
+    animation: piscar 2s ease-in 7s 2 forwards, digitacao 2s steps(40) 8s normal forwards;
+    width: 0%;
 }
+
+@keyframes piscar {
+    from {
+        border-right: 1px solid rgba(255, 255, 255, 0.712);
+    }
+    to {
+        border-right: 1px solid transparent;
+        border-right: unset;
+    }
+}
+
+@keyframes digitacao {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 65%;
+    }
+}
+
 #sobre, #tecnologias, #projetos{
     visibility: hidden;
 }
