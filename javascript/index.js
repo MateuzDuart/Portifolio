@@ -15,6 +15,8 @@ var elem_info = 0
 var info_visivel = false
 var mostrando = false
 var arvore_tec = document.getElementById('arvore')
+var linha_desenhos = document.querySelector('.linha')
+var background = document.querySelector('.background')
 
 sesao_sobre.addEventListener('mousemove', apresentar_elemento)
 sesao_sobre.addEventListener('touchmove', apresentar_elemento)
@@ -26,17 +28,15 @@ sesao_tecnologia.addEventListener('touchmove', esconder_elemento)
 arvore_tec.addEventListener('load', criar_arvore(arvore_tec))
 
 function puxar_tec() {
-    console.log('puxou')
     var f_tecnologias = document.querySelectorAll('.f-tecnologia')
     f_tecnologias.forEach(function(elemento){
         elemento.addEventListener('click', mostrar_info)
     })
-    console.log(f_tecnologias)
 }
 
 function sleep (time) {
     return new Promise((resolve) => setTimeout(resolve, time));
-  }
+}
 
 function apresentar_elemento() {
     marca_texto.style.display = 'unset'
@@ -140,7 +140,6 @@ infos.forEach(function(elemento){
 
 
 function criar_arvore (e) {
-    console.log(e.src)
     fetch(e.src).then((resp) => {
         resp.text().then((resp) => {
             const span = document.createElement('span')
@@ -154,3 +153,12 @@ function criar_arvore (e) {
     })
 
 }
+
+function replicar() {
+    for (let i = 0; i < 18; i++) {
+        background.appendChild(linha_desenhos.cloneNode(true))
+        
+    }
+}
+
+replicar()

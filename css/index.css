@@ -35,10 +35,133 @@ body {
     color: var(--cor1);
 }
 
-.principal {
-    height: 90vh;
+#inicio {
+    width: 100%;
+    height: 94vh;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+
 }
 
+#inicio .linha {
+    position: relative;
+    display: flex;
+    padding: 10px ;
+    font-size: 32px;
+    white-space: nowrap;
+    transform: rotate(-30deg) translate(-0%,-440%);
+}
+
+
+i {
+    color: rgba(0, 0, 0, 0.474);
+    padding: 0 10px;
+    transition: 1s;
+    user-select: none;
+    cursor: default;
+}
+
+i:hover {
+    transition: 0s;
+    color: var(--cor3);
+    text-shadow: 0px 0px 120px #01F534;
+}
+
+.linha div {
+    animation: move_pro_lado 20s linear infinite;
+}
+
+.linha:nth-child(even) div {
+    animation: move_pro_outro_lado 20s linear infinite;
+}
+
+
+
+@keyframes move_pro_lado {
+    0% {
+        transform: translateX(5%);
+    }
+
+    50% {
+        transform: translateX(-61%);
+    }
+
+    100% {
+        transform: translateX(5%);
+    }
+}
+
+@keyframes apagar {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes move_pro_outro_lado {
+    0% {
+        transform: translateX(5%);
+    }
+
+    40% {
+        transform: translateX(-44.8%);
+    }
+
+    100% {
+        transform: translateX(5%);
+    }
+}
+
+@keyframes apagar {
+    to {
+        opacity: 0;
+    }
+}
+
+.vidro {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 500px;
+    height: 270px;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 #4AF76F30;
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    pointer-events: none;
+}
+
+.vidro p {
+    color: #212529;
+    line-height: normal;
+    text-align: center;
+    font-size: 190%;
+    margin-top: 7%;
+    font-weight: 500;
+}
+
+.vidro span {
+    display: block;
+}
+
+.f1 {
+    font-size: 120%;
+}
+
+.f2 {
+    font-size: 80%;
+}
+.f3 {
+    font-size: 150%;
+    color: #111214;
+}
+.f4 {
+    font-size: 80%;
+}
 #sobre, #tecnologias, #projetos{
     visibility: hidden;
 }
