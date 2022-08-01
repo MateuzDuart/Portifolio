@@ -1,12 +1,8 @@
-window.sr = ScrollReveal({reset: true})
+window.sr = ScrollReveal({reset: false})
 ScrollReveal().reveal('#sobre', { delay: 250 })
 ScrollReveal().reveal('#tecnologias', { delay: 250 })
 ScrollReveal().reveal('#projetos', { delay: 250 })
-VanillaTilt.init(document.querySelectorAll(".f-tecnologia"), {
-    max: 30,
-    reverse: true,
-    scale: 1.1
-})
+
 
 
 var marca_texto = document.querySelector('.marca-texto')
@@ -15,10 +11,11 @@ var sesao_inicio = document.querySelector('#inicio')
 var sesao_tecnologia = document.querySelector('#tecnologias')
 var corpo = document.body
 var infos = document.querySelectorAll('.ocultar-informacao')
-var f_tecnologias = document.querySelectorAll('.f-tecnologia')
 var elem_info = 0
 var info_visivel = false
 var mostrando = false
+var arvore_tec = document.getElementById('arvore')
+
 sesao_sobre.addEventListener('mousemove', apresentar_elemento)
 sesao_sobre.addEventListener('touchmove', apresentar_elemento)
 marca_texto.addEventListener('mousedown', pegar_marca_texto)
@@ -26,6 +23,16 @@ marca_texto.addEventListener('touchstart', pegar_marca_texto)
 sesao_sobre.addEventListener('mouseout', esconder_elemento)
 sesao_inicio.addEventListener('touchmove', esconder_elemento)
 sesao_tecnologia.addEventListener('touchmove', esconder_elemento)
+arvore_tec.addEventListener('load', criar_arvore(arvore_tec))
+
+function puxar_tec() {
+    console.log('puxou')
+    var f_tecnologias = document.querySelectorAll('.f-tecnologia')
+    f_tecnologias.forEach(function(elemento){
+        elemento.addEventListener('click', mostrar_info)
+    })
+    console.log(f_tecnologias)
+}
 
 function sleep (time) {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -100,7 +107,7 @@ function mostrar_info(e) {
             info_visivel = false
         } else if (!info_visivel && !mostrando) {
             mostrando = true
-            let elem_class = e.path[0].className.split(' ')[0].replace('f-','')
+            let elem_class = e.path[0].className.baseVal.split(' ')[0].replace('f-','')
             let areas3d = document.querySelectorAll('.area3d')
             let elem_info = document.querySelector(`#info-${elem_class}`)
             let filhos_area3d = areas3d[0].children
@@ -131,6 +138,19 @@ infos.forEach(function(elemento){
     elemento.addEventListener('click', esconder_info)
 })
 
-f_tecnologias.forEach(function(elemento){
-    elemento.addEventListener('click', mostrar_info)
-})
+
+function criar_arvore (e) {
+    console.log(e.src)
+    fetch(e.src).then((resp) => {
+        resp.text().then((resp) => {
+            const span = document.createElement('span')
+            span.innerHTML = resp
+            const inlineSvg = span.querySelector('svg')
+            inlineSvg.id = e.id        
+            e.parentNode.replaceChild(inlineSvg, e)
+            puxar_tec()
+            return true
+        })
+    })
+
+}
