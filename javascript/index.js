@@ -2,7 +2,12 @@ window.sr = ScrollReveal({reset: false})
 ScrollReveal().reveal('#sobre', { delay: 250 })
 ScrollReveal().reveal('#tecnologias', { delay: 250 })
 ScrollReveal().reveal('#projetos', { delay: 250 })
-
+VanillaTilt.init(document.querySelector(".vidro"), {
+    max: 2,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.5
+})
 
 
 var marca_texto = document.querySelector('.marca-texto')
