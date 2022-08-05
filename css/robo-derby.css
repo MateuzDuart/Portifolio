@@ -35,25 +35,26 @@ article {
     position: relative;
     display: block;
     margin: 50px auto;
-    width: 70%;
+    width: 100%;
+    max-width: 928px;
     min-width: 300px;
-    height: 130vh;
+    min-height: 130vh;
     overflow: hidden;
 }
 
-img {
+img.bg {
     position: absolute;
     width: 100%;
     z-index: -1;
 }
 
-article h1, h2 {
+article h1, h2, h3 {
     font-size: 4.5vmin;
     text-align: center;
     margin-top: 5%;
 }
 
-article h2 {
+article h2, h3 {
     margin: 0;
 }
 
@@ -75,18 +76,19 @@ article h1 {
     }
 } @media (min-width: 1000px) {
     article h1 { 
-        margin-top: 7%;
         font-size: 6vmin;
     }
 }
 
 article p:nth-child(3) {
-    margin-top: 1% !important;
 }
 
 article p {
+    position: relative;
+    font-size: clamp(11px ,3vw, 16px);
+    transform: translate(0%, clamp(-18px,calc(-5.5% + 2vw), -2px));
     margin-bottom: 0;
-    line-height: 3vw;
+    line-height: max(41px , 253%);
     width: 85%;
     margin-top: 2%;
     margin-left: 12%;
@@ -94,3 +96,55 @@ article p {
 .indent {
     margin-left: 10% ;
 }
+
+.img-robo {
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    max-width: 50%;
+}
+
+article div {
+    text-align: center;
+}
+
+.img-robo-ini {
+    margin: auto;
+    margin-top: 25px;
+    max-width: 50%;
+}
+
+.img-robo-fim {
+    margin: auto;
+    margin-top: 25px;
+    max-width: 47%;
+}
+
+.parag3 {
+    margin-top: 3.5%;
+}
+
+.parag4 {
+    margin-top: 3%;
+}
+
+.parag5 {
+    margin-top: 3.9%;
+}
+
+.parag6 {
+    margin-top: 4.3%;
+}
+
+.parag7 {
+    margin-top: 1.6%;
+}
+
+.parag8 {
+    margin-top: 1.5%;
+}
+
+.parag9 {
+    margin-top: 3.5%;
+}
+
