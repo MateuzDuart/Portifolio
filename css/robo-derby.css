@@ -9,7 +9,7 @@ h1 {
 
 @media (max-width: 560px) {
     h1 {
-    font-size: 10vw;
+    font-size: clamp(13px,10vw,35px);
 }
 }
 
@@ -31,77 +31,72 @@ iframe {
     height: 90%;
     width: 90%;
 }
-article {
+section {
+    width: 100%;
+}
+#envelope {
     position: relative;
-    display: block;
-    margin: 50px auto;
-    width: 100%;
-    max-width: 928px;
-    min-width: 300px;
-    min-height: 130vh;
-    overflow: hidden;
+    margin: 0 auto;
+    top: -388px;
 }
 
-img.bg {
+article {
+    background-image: url('../imagens/papel-amarelo.jpg');
     position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left: 50%;
     width: 100%;
-    z-index: -1;
-}
-
-article h1, h2, h3 {
-    font-size: 4.5vmin;
-    text-align: center;
-    margin-top: 5%;
+    max-width: 800px;
+    min-width: 300px;
+    min-height: 90vh;
 }
 
 article h2, h3 {
+    text-align: center;
     margin: 0;
 }
 
-article h1 {
-    margin-bottom: 0;
+article h2 {
+    font-size: clamp(16px, 7vw, 27px);
 }
 
-@media (max-width: 420px) {
-    article h1 {
-        font-size: 5vmin;
-    }
-} @media (min-width: 700px) {
-    article h1 { 
-        font-size: 5.5vmin;
-    }
-} @media (min-width: 900px) {
-    article h1 { 
-        margin-top: 6.5%;
-    }
-} @media (min-width: 1000px) {
-    article h1 { 
-        font-size: 6vmin;
-    }
+article h3 {
+    font-size: clamp(16px, 7vw, 20px);
 }
+
+article h1 {
+    padding-top: 40px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
 
 article p:nth-child(3) {
+    margin-top: 1% ;
 }
 
 article p {
-    position: relative;
-    font-size: clamp(11px ,3vw, 16px);
-    transform: translate(0%, clamp(-18px,calc(-5.5% + 2vw), -2px));
     margin-bottom: 0;
-    line-height: max(41px , 253%);
+    line-height: 42px;
     width: 85%;
     margin-top: 2%;
-    margin-left: 12%;
+    margin: auto;
 }
 .indent {
     margin-left: 10% ;
 }
 
+#papel-amarelo {
+    transform: translate(0px, -58px);
+}
+
 .img-robo {
     display: block;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 10px;
     max-width: 50%;
+    min-width: 260px;
 }
 
 article div {
@@ -110,14 +105,16 @@ article div {
 
 .img-robo-ini {
     margin: auto;
-    margin-top: 25px;
+    margin-top: 10px;
     max-width: 50%;
+    min-width: 260px;
 }
 
 .img-robo-fim {
     margin: auto;
-    margin-top: 25px;
+    margin-top: 10px;
     max-width: 47%;
+    min-width: 260px;
 }
 
 .parag3 {
@@ -148,3 +145,38 @@ article div {
     margin-top: 3.5%;
 }
 
+svg.envelope {
+    display: block;
+    margin: 40px auto 0px auto;
+}
+
+#aba-fechada {
+    animation-name: abrir-aba-baixo-envelope;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+#aba-tras {
+    transform: translate(0, 106px);
+    animation-name: abrir-aba-cima-envelope;
+    animation-delay: 0.4s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes abrir-aba-baixo-envelope {
+    from {
+        transform: rotateX(5deg);
+    }
+
+    to {
+        transform: rotateX(59deg);
+    }
+} @keyframes abrir-aba-cima-envelope {
+    from {
+        transform: translate(0, 106px);
+    }
+    to {
+        transform: translate(0, 0px);
+    }
+}

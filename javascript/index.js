@@ -156,7 +156,6 @@ function criar_arvore (e) {
             return true
         })
     })
-
 }
 
 function replicar() {
