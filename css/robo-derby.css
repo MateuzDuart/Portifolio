@@ -1,3 +1,12 @@
+
+:root {
+    --cor1: #007519;
+    --cor2: #4AF76F;
+    --cor3: #01F534;
+    --cor4: #237535;
+    --cor5: #00C22A;   
+   }
+
 body {
     background-color: #212529;
 }
@@ -153,7 +162,6 @@ article div {
     animation-delay: 1s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    height: 115vh;
     width: 100%;
 }
 
@@ -249,4 +257,37 @@ div.puxador {
 } div.puxador:active {
     box-shadow: unset;
     transform: scale(0.9) !important;
+}
+
+.b-voltar-ancora {
+    text-decoration: none;
+    color: #212529;
+}
+
+.b_voltar {
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    background-color: var(--cor5);
+    margin: 0px auto 20px auto ;
+    cursor: pointer;
+} .b_voltar:active {
+    transform: scale(0.9);
+
+}
+.b_voltar p{
+    margin: 0;
+    padding:13px;
+}
+
+footer {
+    text-align: center;
+    height: 70px;
+    background-image: linear-gradient(90deg, var(--cor1),var(--cor3),var(--cor2),var(--cor5),var(--cor4));
+}
+
+.copy {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 23px;
 }

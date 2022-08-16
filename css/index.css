@@ -350,6 +350,7 @@ i:hover, i:active{
 /* Tecnologia */
 
 #tecnologias {
+    min-height: 427px;
     overflow: hidden;
     position: relative;
     background-image: linear-gradient(178deg, var(--cor2), var(--cor3));
@@ -569,15 +570,39 @@ i:hover, i:active{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 800px;
+    min-height: 300px;
     justify-content: space-around;
 }
+
+.container-projeto {
+    color: white;
+    width: 300px;
+}
+
+.container-projeto h1, h2 {
+    text-align: center;
+}
+
+.container-projeto p {
+    text-align: justify;
+} 
+
+
 .projeto {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 300px;
     height: 200px;
     background-color: white;
+    border: 5px solid white;
+} .projeto:active {
+    transform: scale(0.9);
+   }
+
+.proj1 {
+    background-image: url('../imagens/site-robo-derby.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -619,7 +644,6 @@ footer img {
 }
 
 footer img:active {
-
     filter: unset;
     width: 40px;
 }
