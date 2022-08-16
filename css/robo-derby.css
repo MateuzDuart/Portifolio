@@ -47,10 +47,10 @@ article {
     min-height: 90vh;
     box-shadow:2px 3px 7px rgba(0, 0, 0, 0.589);
     display: none;
-}
-
-article:nth-child(2) {
+} article:nth-child(2) {
     display: unset;
+} article > * {
+    pointer-events: none;
 }
 
 article h2, h3 {
@@ -147,8 +147,8 @@ article div {
 }
 
 .conteudo {
-    position: relative;  
-    top: -855px;
+    position: relative;   
+    top: -821px;
     animation-name: puxar-conteudo;
     animation-delay: 1s;
     animation-duration: 1s;
@@ -158,7 +158,7 @@ article div {
 }
 
 .envelope {
-    z-index: 1;
+    z-index: 2;
     background-image: url(../imagens/textura-envelope.jpg);
     height: 115vh;
     width: clamp(300px, 100%, 800px);
@@ -189,7 +189,7 @@ article div {
     transform: rotateX(0deg);
     transform-origin: top;
     top: 100px;
-    z-index: 2;
+    z-index: 3;
     animation-name: abrir-envelope;
     animation-duration: 2s;
     animation-fill-mode: forwards;
@@ -205,10 +205,11 @@ article div {
 }
 
 @keyframes puxar-conteudo {
-    0% {   
-        top: -855px;
+    0% {          
+        top: -821px;
     } 100% {
         top: -899px;
+        opacity: 1;
     }
 }
 
