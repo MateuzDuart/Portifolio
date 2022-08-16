@@ -46,6 +46,11 @@ article {
     min-width: 300px;
     min-height: 90vh;
     box-shadow:2px 3px 7px rgba(0, 0, 0, 0.589);
+    display: none;
+}
+
+article:nth-child(2) {
+    display: unset;
 }
 
 article h2, h3 {
@@ -239,4 +244,8 @@ div.puxador {
     border-radius: 63px 234px 0px 0px;
     filter: brightness(0.8);
     box-shadow: 5px -2px 9px -1px rgba(0, 0, 0, 0.534);
+    cursor: pointer;
+} div.puxador:active {
+    box-shadow: unset;
+    transform: scale(0.9) !important;
 }
