@@ -55,7 +55,7 @@ body {
 }
 
 
-i {
+#inicio i {
     color: rgba(0, 0, 0, 0.474);
     padding: 0 10px;
     transition: 1s;
@@ -63,7 +63,7 @@ i {
     cursor: default;
 }
 
-i:hover, i:active{
+#inicio i:hover, i:active{
     transition: 0s;
     color: var(--cor3);
     text-shadow: 0px 0px 120px #01F534;
@@ -574,9 +574,29 @@ i:hover, i:active{
     justify-content: space-around;
 }
 
+.container-pesquisa {
+
+    height: 50px;
+    width: 100%;
+    text-align: end;
+}
+
+.g-pesquisa {
+    margin: 10px;
+}
+
+.g-pesquisa i {
+    color: #01F534;
+    padding: 0 10px;
+    cursor: pointer;
+} .g-pesquisa i:hover {
+    color: var(--cor4);
+}
+
 .container-projeto {
     color: white;
     width: 300px;
+    margin: 10px;
 }
 
 .container-projeto h1, h2 {
@@ -587,7 +607,6 @@ i:hover, i:active{
     text-align: justify;
 } 
 
-
 .projeto {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -595,20 +614,19 @@ i:hover, i:active{
     height: 200px;
     background-color: white;
     border: 5px solid white;
+    background-position: center;
+    background-size: cover;
 } .projeto:active {
     transform: scale(0.9);
    }
 
 .proj1 {
     background-image: url('../imagens/site-robo-derby.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
-
-
-
-
+.proj2 {
+    background-image: url('../imagens/site-robo-instagram.JPG');
+}
 
 
 
