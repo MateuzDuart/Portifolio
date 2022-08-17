@@ -62,7 +62,7 @@
                     <rect class="f-python f-tecnologia cobertura cobertura" x="235" y="388" width="128" height="128" fill="#D9D9D900" />
                 </g>
             </a>
-            <a href="https://www.instagram.com/mateuz_u_/" target="_blank" rel="external">
+            <a href="https://www.instagram.com/mateuz_u_/" target="_blank" rel="external" aria-label="foto mateus victor">
                 <rect id="minha-foto" class='sombra' y="366" width="150" height="150" fill="url(#pattern0)" />
             </a>
         </g>
