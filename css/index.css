@@ -129,7 +129,7 @@ body {
     height: 270px;
     background: rgba( 255, 255, 255, 0.35 );
     backdrop-filter: blur( 4.5px );
-    -webkit-backdrop-filter: blur( 4.5px );
+    
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     animation: acender 5s 9s normal forwards;
@@ -599,6 +599,10 @@ body {
     color: white;
     width: 300px;
     margin: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .container-projeto h1, h2 {
@@ -610,17 +614,20 @@ body {
 } 
 
 .projeto {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 300px;
+    margin: 10px;
+    width: 280;
     height: 200px;
     background-color: white;
     border: 5px solid white;
     background-position: center;
     background-size: cover;
-} .projeto:active {
+    transition: 0.3s
+} .projeto:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+   }.projeto:active {
     transform: scale(0.9);
-   }
+   } 
 
 .proj1 {
     background-image: url('../imagens/site-robo-derby.jpg');
