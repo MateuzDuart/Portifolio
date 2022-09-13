@@ -2,6 +2,7 @@ window.sr = ScrollReveal({reset: false})
 ScrollReveal().reveal('#sobre', { delay: 250 })
 ScrollReveal().reveal('#tecnologias', { delay: 250 })
 ScrollReveal().reveal('#projetos', { delay: 250 })
+ScrollReveal().reveal('#habilidades', { delay: 250 })
 VanillaTilt.init(document.querySelector(".vidro"), {
     max: 2,
     speed: 400,
@@ -20,6 +21,7 @@ var elem_info = 0
 var info_visivel = false
 var mostrando = false
 var arvore_tec = document.getElementById('arvore')
+var habilidades = document.getElementById('lista-habilidades')
 var linha_desenhos = document.querySelector('.linha')
 var background = document.querySelector('.background')
 
@@ -31,6 +33,7 @@ sesao_sobre.addEventListener('mouseout', esconder_elemento)
 sesao_inicio.addEventListener('touchmove', esconder_elemento)
 sesao_tecnologia.addEventListener('touchmove', esconder_elemento)
 arvore_tec.addEventListener('load', criar_arvore(arvore_tec))
+habilidades.addEventListener('load', criar_arvore(habilidades))
 
 function puxar_tec() {
     var f_tecnologias = document.querySelectorAll('.f-tecnologia')

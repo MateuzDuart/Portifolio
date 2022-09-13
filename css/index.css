@@ -236,7 +236,7 @@ body {
     }
 }
 
-#sobre, #tecnologias, #projetos{
+#sobre, #tecnologias, #projetos, #habilidades{
     visibility: hidden;
 }
 
@@ -358,11 +358,23 @@ body {
     background-image: linear-gradient(178deg, var(--cor2), var(--cor3));
 }
 
+#habilidades {
+    min-height: 450px;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(178deg, var(--cor3), var(--cor5));
+}
+
 #arvore {
     height: 90vh;
     width: auto;
     
-}    
+}
+
+
+#lista-habilidades {
+    width: min(926px, 100vw);
+}
 
 .sombra {
     filter: drop-shadow(2px 4px 6px black);
@@ -415,8 +427,24 @@ body {
 
 
 
-} @media (min-width: 901px) {
+} 
 
+@media (max-width: 600px) {
+    #lista-habilidades {
+        transform: rotate(90deg) translate(-25%, 91.3%);
+        display: block;
+        width: max(430px, 70%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+    }
+
+    #figma-original, #idioma, #git-original, #github-original, #photoshop, #sony-vegas, #excel{
+        transform: rotate(270deg);
+        transform-box: fill-box;
+        transform-origin: unset;
+    }
 }
 
 .area3d {
