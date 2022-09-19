@@ -442,7 +442,7 @@ body {
     }
 
     #figma-original, #idioma, #git-original, #github-original, #photoshop, #sony-vegas, #excel{
-        animation: unset;
+        animation: unset !important;
         transform: rotate(270deg);
         transform-box: fill-box;
         transform-origin: unset;
