@@ -431,7 +431,7 @@ body {
 
 @media (max-width: 600px) {
     #lista-habilidades {
-        margin-left: unset;
+        margin-left: unset !important; 
         transform: rotate(90deg) translate(-25%, 91.3%);
         display: block;
         width: max(430px, 70%);
@@ -442,7 +442,7 @@ body {
     }
 
     #figma-original, #idioma, #git-original, #github-original, #photoshop, #sony-vegas, #excel{
-        animation: unset !important;
+        animation: unset ;
         transform: rotate(270deg);
         transform-box: fill-box;
         transform-origin: unset;
