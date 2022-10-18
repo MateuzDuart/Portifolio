@@ -169,3 +169,37 @@ function replicar() {
 }
 
 replicar()
+
+let slide = 0
+
+function projeto_ilimita() {
+    document.querySelector('.info-caixa').classList.toggle('ativado')
+    document.querySelector('.fechar').classList.toggle('ativado')
+    document.querySelectorAll('.seta-slider').forEach((e) => {
+        e.classList.toggle('ativado')
+    }
+    )
+}
+document.querySelector('.proj3').onclick = projeto_ilimita
+
+document.querySelector('.fechar').onclick = projeto_ilimita
+
+function id_seta(num) {
+    console.log(num)
+    document.querySelector('.seta-slider.l').href = `#c${num + 1}`
+    document.querySelector('.seta-slider.r').href = `#c${num + 1}`
+} 
+
+document.querySelector('.seta-slider.l').onclick = function() {
+    if (slide > 0){
+        slide--
+        id_seta(slide)
+    }
+}
+
+document.querySelector('.seta-slider.r').onclick = function() {
+    if (slide < 4) {
+        slide++
+        id_seta(slide)
+    }      
+}
