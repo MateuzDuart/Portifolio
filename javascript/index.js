@@ -61,7 +61,6 @@ function pegar_marca_texto() {
     marca_texto.addEventListener('mouseup', solta_marca_texto)
     marca_texto.addEventListener('touchend', solta_marca_texto)
     function posicao_mouse(e) {
-        console.log(e)
         var x = e.clientX - 50 + 'px'
         if (x == 'NaNpx') {
             corpo.style.overflow = 'hidden'
@@ -104,13 +103,10 @@ function esconder_info() {
         )
     })
     info_visivel = false
-    console.log('elemento invisivel')
 }
 
 function mostrar_info(e) {
-    console.log(mostrando)
         if (info_visivel && !mostrando) {
-            console.log('ocultou')
             esconder_info()
             info_visivel = false
         } else if (!info_visivel && !mostrando) {
@@ -185,7 +181,6 @@ document.querySelector('.proj3').onclick = projeto_ilimita
 document.querySelector('.fechar').onclick = projeto_ilimita
 
 function id_seta(num) {
-    console.log(num)
     document.querySelector('.seta-slider.l').href = `#c${num + 1}`
     document.querySelector('.seta-slider.r').href = `#c${num + 1}`
 } 
