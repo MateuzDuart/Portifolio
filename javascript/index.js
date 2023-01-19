@@ -11,7 +11,7 @@ VanillaTilt.init(document.querySelector(".vidro"), {
 })
 
 
-var marca_texto = document.querySelector('.marca-texto')
+
 var sesao_sobre = document.querySelector('#sobre')
 var sesao_inicio = document.querySelector('#inicio')
 var sesao_tecnologia = document.querySelector('#tecnologias')
@@ -27,8 +27,6 @@ var background = document.querySelector('.background')
 
 sesao_sobre.addEventListener('mousemove', apresentar_elemento)
 sesao_sobre.addEventListener('touchmove', apresentar_elemento)
-marca_texto.addEventListener('mousedown', pegar_marca_texto)
-marca_texto.addEventListener('touchstart', pegar_marca_texto)
 sesao_sobre.addEventListener('mouseout', esconder_elemento)
 sesao_inicio.addEventListener('touchmove', esconder_elemento)
 sesao_tecnologia.addEventListener('touchmove', esconder_elemento)
