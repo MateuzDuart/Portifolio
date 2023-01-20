@@ -25,11 +25,6 @@ var habilidades = document.getElementById('lista-habilidades')
 var linha_desenhos = document.querySelector('.linha')
 var background = document.querySelector('.background')
 
-sesao_sobre.addEventListener('mousemove', apresentar_elemento)
-sesao_sobre.addEventListener('touchmove', apresentar_elemento)
-sesao_sobre.addEventListener('mouseout', esconder_elemento)
-sesao_inicio.addEventListener('touchmove', esconder_elemento)
-sesao_tecnologia.addEventListener('touchmove', esconder_elemento)
 arvore_tec.addEventListener('load', criar_arvore(arvore_tec))
 habilidades.addEventListener('load', criar_arvore(habilidades))
 
@@ -44,41 +39,6 @@ function sleep (time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-function apresentar_elemento() {
-    marca_texto.style.display = 'unset'
-    marca_texto.style.animationName = 'slide-marca-texto'
-}
-
-function esconder_elemento() {
-    marca_texto.style.animationName = 'fecha-marca-texto'
-}
-
-function pegar_marca_texto() {
-    marca_texto.addEventListener('mousemove', posicao_mouse)
-    marca_texto.addEventListener('touchmove', posicao_mouse)
-    marca_texto.addEventListener('mouseup', solta_marca_texto)
-    marca_texto.addEventListener('touchend', solta_marca_texto)
-    function posicao_mouse(e) {
-        var x = e.clientX - 50 + 'px'
-        if (x == 'NaNpx') {
-            corpo.style.overflow = 'hidden'
-            x = e.changedTouches[0].clientX - 50 + 'px'
-            var y = e.changedTouches[0].clientY - 50 + 'px'
-        } else {
-            x = e.clientX - 50 + 'px'
-            var y = e.clientY - 50 + 'px'
-        }
-        this.style.left = x
-        this.style.top = y
-    }
-
-    function solta_marca_texto() {
-        corpo.style.overflow = 'unset'
-        this.style.left = 'unset'
-        marca_texto.removeEventListener('mousemove', posicao_mouse)
-        marca_texto.removeEventListener('a',posicao_mouse)
-    }
-}
 
 function esconder_info() {
     let areas3d = document.querySelector('.area3d')
