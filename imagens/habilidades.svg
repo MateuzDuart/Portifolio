@@ -129,7 +129,7 @@
             </g>
         </g>
         <a aria-label="Projetos ingles" class="sombra" href="#carrosel-projetos">
-            <rect id="idioma" x="287" y="256" width="100" height="100" fill="url(#pattern1)" />
+            <rect id="idioma" x="287" y="256" width="100" height="100" fill="url(#pattern2)" />
         </a>
         <g id="figma-original" class="sombra" clip-path="url(#clip5_101_3)">
             <path id="Vector_28"
@@ -153,7 +153,7 @@
 
 
     <defs>
-        <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
             <use xlink:href="#image0_101_" transform="scale(0.0208333)" />
         </pattern>
         <clipPath id="clip0_101_">

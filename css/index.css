@@ -411,7 +411,7 @@ body {
         height: unset;
     max-height: 100vh;
     display: block;
-    margin: 10vw -11vw;
+    margin: 13vw -11vw;
     width: 120vw;
     transform-origin: center;
     transform: rotate(270deg);
@@ -431,7 +431,7 @@ body {
 
 } 
 
-@media (max-width: 350px) {
+@media (max-width: 30px) {
     #lista-habilidades {
         transform: rotate(90deg) translate(-25%, 91.3%);
         width: max(408px, 70%);
@@ -639,17 +639,18 @@ body {
 
 .container-projeto p {
     text-align: justify;
+    padding: 0 10px;
 } 
 
 .projeto {
     margin: 10px;
-    width: 280;
     height: 200px;
     background-color: white;
     border: 5px solid white;
     background-position: center;
     background-size: cover;
-    transition: 0.3s
+    transition: 0.3s;
+    border-radius: 10px;
 } .projeto:hover {
     transform: scale(1.1);
     transition: 0.3s;
