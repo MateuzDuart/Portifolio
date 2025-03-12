@@ -2,384 +2,204 @@
 <html lang="pt-br">
 
 <head>
+    <!-- importar compoenentes -->
+    <script src="/components/header.js"></script>
+    <script src="/components/profileImage.js"></script>
+    <script src="/components/tag.js"></script>
+    <script src="/components/projectComponent.js"></script>
+    <script src="/components/servicesComponent.js"></script>
+    <script src="/components/contactComponent.js"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMR3G6EG72"></script>
+    <script src="javascript/index.js"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TMR3G6EG72');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TMR3G6EG72');
     </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Mateus Victor Daurte">
     <meta http-equiv="cache-control" content="no-cache">
     <meta http-equiv="content-language" content="pt-br">
     <meta http-equiv="copyright" content="Mateus Duarte">
-    <meta name="keywords" content="Mateus, curriculo Mateus, curriculo de programador, portfólio, portfolio programador">
+    <meta name="keywords"
+        content="Mateus, curriculo Mateus, curriculo de programador, portfólio, portfolio programador, desenvolvedor full-stack, desenvolvedor back-end, desenvlvedor front-end">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="veja meu portfólio e aprenda como ter um web currículo elegante e eficiente">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/index.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
-    <title>Mateuz Duart || Portfólio</title>
+
+    <title>Mateuz Duart | Portfólio</title>
 </head>
 
 <body class="bg-dark">
-    <header>
-        <nav class="bnavegacao">
-            <div class="row">
-                <div class="col justify-content-center nav links_nav">
-                    <a class="nav-link" href="#" rel="tag">Início</a>
-                    <a class="nav-link" href="#sobre" rel="tag">Sobre</a>
-                    <a class="nav-link" href="#tecnologias" rel="tag">tecnologias</a>
-                    <a class="nav-link" href="#projetos" rel="tag">Projetos</a>
-                </div>
-            </div>
-
-        </nav>
-    </header>
+    <custom-header></custom-header>
     <main>
-        <section id="inicio">
-            <div class="background">
-                <div class="linha">
-                    <div>
-                        <i class="bi bi-android2"></i>
-                        <i class="bi bi-apple"></i>
-                        <i class="bi bi-award"></i>
-                        <i class="bi bi-balloon-fill"></i>
-                        <i class="bi bi-broadcast-pin"></i>
-                        <i class="bi bi-bug-fill"></i>
-                        <i class="bi bi-camera-video-fill"></i>
-                        <i class="bi bi-chat-right-dots-fill"></i>
-                        <i class="bi bi-cloud-upload-fill"></i>
-                        <i class="bi bi-controller"></i>
-                        <i class="bi bi-disc-fill"></i>
-                        <i class="bi bi-dpad-fill"></i>
-                        <i class="bi bi-earbuds"></i>
-                        <i class="bi bi-gpu-card"></i>
-                        <i class="bi bi-hand-thumbs-up-fill"></i>
-                        <i class="bi bi-hdd-stack-fill"></i>
-                        <i class="bi bi-joystick"></i>
-                        <i class="bi bi-lightbulb-fill"></i>
-                    </div>
-                    <div>
-                        <i class="bi bi-android2"></i>
-                        <i class="bi bi-apple"></i>
-                        <i class="bi bi-award"></i>
-                        <i class="bi bi-balloon-fill"></i>
-                        <i class="bi bi-broadcast-pin"></i>
-                        <i class="bi bi-bug-fill"></i>
-                        <i class="bi bi-camera-video-fill"></i>
-                        <i class="bi bi-chat-right-dots-fill"></i>
-                        <i class="bi bi-cloud-upload-fill"></i>
-                        <i class="bi bi-controller"></i>
-                        <i class="bi bi-disc-fill"></i>
-                        <i class="bi bi-dpad-fill"></i>
-                        <i class="bi bi-earbuds"></i>
-                        <i class="bi bi-gpu-card"></i>
-                        <i class="bi bi-hand-thumbs-up-fill"></i>
-                        <i class="bi bi-hdd-stack-fill"></i>
-                        <i class="bi bi-joystick"></i>
-                        <i class="bi bi-lightbulb-fill"></i>
-                    </div>
+        <section id="Info">
+            <div class="background"></div>
+            <div class="info">
+                <profile-image src="/imagens/minha foto.jpg"></profile-image>
+                <div class="devDescription">
+                    <p class="devText">What’s up! Meu nome é <span class="textHighlight">Mateus Duarte</span> e sou</p>
+                    <h1 class="devTitle">Desenvolvedor Fullstack</h1>
+                    <p class="devDescription">Transformo problemas em dinheiro, você trás o problema e eu a solução.
+                        Desenvolvo sistemas de
+                        pequenas e grandes empresas, contribuindo com soluções inovadoras e eficazes para desafios
+                        complexos.</p>
                 </div>
             </div>
-            <div class="vidro">
-                <p><span class="f1">Seja bem-vindo(a)</span> <span class="f2">me chamo</span> <span
-                        class="f3"><strong>Mateus Duarte</strong></span> <span class="f4">e esse é meu portifólio</span>
-                </p>
-                <a href="#sobre"><img class="rolagem" src="imagens/seta-direita.svg" alt="seta para baixo"
-                        aria-label="decer para proxima seção"></a>
+            <div class="tags">
+                <tag-component img-src="/imagens/HTML-logo.svg" text="HTML"></tag-component>
+                <tag-component img-src="/imagens/CSS-logo.svg" text="CSS"></tag-component>
+                <tag-component img-src="/imagens/js.png" text="Javascript"></tag-component>
+                <tag-component img-src="/imagens/typescript.png" text="Typescript"></tag-component>
+                <tag-component img-src="/imagens/React.svg" text="React / React-native"></tag-component>
+                <tag-component img-src="/imagens/Node.js.svg" text="Node.js"></tag-component>
+                <tag-component img-src="/imagens/rust.svg" text="Rust"></tag-component>
+                <tag-component img-src="/imagens/python.png" text="Python"></tag-component>
+                <tag-component img-src="/imagens/c-.png" text="C/C++"></tag-component>
+                <tag-component img-src="/imagens/assembly.png" text="Assembly"></tag-component>
+                <tag-component img-src="/imagens/sql-server.png" text="SQL"></tag-component>
             </div>
+            <a href="#about">
+                <img src="/imagens/DownArrow.svg" alt="Seta para baixo">
+            </a>
         </section>
-        <section id="sobre">
-            <div class="container-flex">
-                <div class="row">
-                    <div class="col-12 col-xl-3 ajust-foto">
-                        <img class="img-responsive mt-2"
-                            src="imagens/75580716_2690664797827767_8424576719016427520_n.jpg"
-                            alt="Foto do criador do site Mateus Duarte">
-                    </div>
-                    <div class="col-12 col-xl-9 ajust">
-                        <p id="que-sou-eu" class="mt-4 p-2">Olá, eu sou o <strong>Mateus</strong>, sou um ex-atleta que
-                            ama programação, eu sempre tive paixão por tecnologia e desde pequeno eu já construía
-                            brinquedos com peças de eletrônicos velhos, meu primeiro contato com a programação foi
-                            através do <strong>arduino</strong>, eu não sabia oque era programação, mas eu sabia oque eu
-                            queria fazer, então eu saí pesquisando na internet e consegui fazer um cronômetro automático
-                            programando em <strong>c++</strong>, eu não sabia programar, mas eu sempre fui ótimo com
-                            logica, então
-                            consegui desenrolar e termina o projeto que era um cronômetro inteligente que parava o
-                            tempo quando você passava na frente dele, muitas pessoas quiseram comprar esse meu projeto,
-                            porém, eu não tinha capacidade para lo desenvolve em massa, e depois disso inicie os estudos
-                            com <strong>python</strong>, depois <strong>HTML</strong>, <strong>CSS</strong> e
-                            <strong>JavaScript</strong> e o resto da minha história eu ainda estou construindo segue a
-                            arvore dos meus estudos abaixo para ver em tempo real oque estou estudando
-                        </p>
-                        
-                    </div>
+        <section id="about">
+            <h2 class="subtitle">Quem sou eu</h2>
+            <div class="biography">
+                <div class="biographySection">
+                    <h3 class="biographyTitle">Introdução</h3>
+                    <p>Meu nome é <span class="textHighlight">Mateus</span> e sou um <span
+                            class="textHighlight">desenvolvedor full-stack</span> apaixonado por aprender e me adaptar a
+                        novos
+                        desafios. Tenho experiência em diversas áreas da TI, incluindo <span
+                            class="textHighlight">Front-end</span>, <span class="textHighlight">Back-end</span>,
+                        <span class="textHighlight">Desenvolvimento Mobile</span>, <span
+                            class="textHighlight">Desenvolvimento Desktop</span>,
+                        <span class="textHighlight">DevOps</span>, <span class="textHighlight">Pentest</span>, <span
+                            class="textHighlight">Engenharia Reversa</span> e
+                        <span class="textHighlight">Análise de Malware</span>.
+                        Embora tenha conhecimento em muitas áreas, não me considero excepcional em todas, mas estou
+                        sempre em
+                        busca
+                        de aprimoramento.
+                    </p>
                 </div>
-            </div>
-        </section>
-        <section id="tecnologias">
-            <h1 class="text-center">Tecnologias</h1>
-            <img id="arvore" src="imagens/arvore.svg" alt="arvore de tecnologia">
-            <div class="area3d">
-                <div id="info-python" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">Python</h2>
-                            <p>
-                                Python foi a primeira linguagem de pro&shy;gra&shy;ma&shy;ção que eu me a profundei e
-                                que eu posso dizer que foi a primeira que aprendi, com ela eu foquei muito em
-                                desenvolver softwares, bots e em fazer web-scraping, e atualmente estou
-                                es&shy;tu&shy;dan&shy;do algumas bi&shy;bli&shy;o&shy;te&shy;cas para
-                                de&shy;sen&shy;vol&shy;ver apps mobile e desktop<br>
-                                <span>os projetos feitos com python foram abertos na sessão a baixo</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="info-html" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">HTML5</h2>
-                            <p>
-                                o html eu já posso dizer que dominei 100% por mais que algumas vezes eu te&shy;nha algum
-                                pro&shy;ble&shy;ma eu sempre consigo resolver. Se fosse para cita algo que me falta no
-                                html, seria
-                                só um curso de SEO que eu ainda não fiz, porém, creio que depois disso a parte de html
-                                vai esta zerada.
-                                <span>os projetos feitos com HTML foram abertos na sessão a baixo</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="info-javascript" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">JavaScript</h2>
-                            <p>
-                                Java script é uma linguagem que eu ve&shy;nho pe&shy;ga&shy;ndo
-                                ma&shy;tu&shy;ri&shy;da&shy;de com o tempo e com os projetos que venho desenvolvendo, eu
-                                já consegui fazer bastante coisas com ela pós ela é bem pa&shy;re&shy;ci&shy;da com o
-                                py&shy;thon po&shy;rém eu ainda tenho muito caminho para percorrer com ela<br>
-                                <span>alguns projetos feitos com java script foram abertos na sessão a baixo</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="info-react" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">React</h2>
-                            <p style="text-align: center;">
-                                Estudos em Progresso
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="info-css" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">CSS3</h2>
-                            <p>
-                                Css é uma lin&shy;gua&shy;gem que eu estou amando a&shy;pren&shy;der e
-                                de&shy;sen&shy;vol&shy;ver, ela é uma lin&shy;gua&shy;gem bem po&shy;de&shy;ro&shy;sa
-                                que per&shy;mi&shy;te uma am&shy;pla ga&shy;ma de
-                                po&shy;ssi&shy;bi&shy;li&shy;da&shy;des de alteração/&shy;criações.
-                                Ccs está sen&shy;do uma lin&shy;gua&shy;gem que eu venho me
-                                de&shy;sen&shy;vol&shy;ven&shy;do muito bem, eu fa&shy;ci&shy;lmente posso dizer que
-                                dominei a linguagem, já tenho bastante facilidade em trabalhar com ela, e ainda venho
-                                melhorando mais a cada dia.
-                                <span>alguns projetos feitos com CSS foram abertos na sessão a baixo</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="info-bootstrap" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">Bootstrap</h2>
-                            <p>
-                                O bootstrap é uma framework genial, e lhe faz polpar muito tempo, quando você já entende
-                                bem sobre css fica fácil pegar a lógica do bootstrap eu me dei bastante bem com ela e já
-                                posso dizer que eu estou apto a criar sites com ela
-                                <span>alguns projetos feitos com o bootstrap foram abertos na sessão a baixo</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="info-sql" class="informacao">
-                    <div class="row linha-info">
-                        <div class="col-1 align-self-center caixa-img">
-                            <img class="ocultar-informacao" src="imagens/seta-direita.svg"
-                                alt="seta para direta ocultar pagina">
-                        </div>
-                        <div class="col-11">
-                            <h2 class="text-center">SQL</h2>
-                            <p>
-                                Eu aprendi o básico de SQL quando eu fiz o curso, ele foi voltado ao MySQL porém eu aprendi a linguagem SQL para poder trabalhar com qualquer banco de dados.
-                                <span>alguns projetos feitos com o bootstrap foram abertos na sessão a baixo</span>
-                            </p>
-                        </div>
-                    </div>
+                <div class="biographySection">
+                    <h3 class="biographyTitle">Minha trajetória</h3>
+                    <p>Minha jornada na tecnologia começou com <span class="textHighlight">Python</span>, onde
+                        desenvolvi sistemas utilizando <span class="textHighlight">Selenium</span> para
+                        automação. Em seguida, mergulhei no desenvolvimento <span
+                            class="textHighlight">front-end</span>, expandindo meus conhecimentos
+                        antes
+                        de aprender <span class="textHighlight">back-end</span> com <span
+                            class="textHighlight">Express.js</span>.</p>
+                    <p>Buscando ampliar minhas habilidades, fiz um curso de <span class="textHighlight">IoT (Internet
+                            das Coisas)</span> na <span class="textHighlight">Fit Academy</span>,
+                        seguido por um curso de <span class="textHighlight">AWS Cloud</span> na <span
+                            class="textHighlight">Escola da Nuvem</span>, onde aprendi sobre infraestrutura em
+                        nuvem.
+                        Logo depois, <span class="textHighlight">entrei no mercado de trabalho</span>, aplicando meus
+                        conhecimentos como <span class="textHighlight">
+                            desenvolvedor
+                            full-stack
+                        </span>.</p>
+                    <p>
+                        Com a necessidade de aprimorar o <span class="textHighlight">desenvolvimento mobile</span>,
+                        aprofundei meus estudos em <span class="textHighlight">
+                            React
+                            Native
+                        </span>. Mais tarde, explorei <span class="textHighlight">engenharia reversa</span>, aprendendo
+                        <span class="textHighlight">Assembly</span>, <span class="textHighlight">C</span> e <span
+                            class="textHighlight">C++</span>, além de me
+                        especializar em <span class="textHighlight">engenharia reversa no Android</span>. Isso me levou
+                        a atuar como <span class="textHighlight">pentester</span> em Android,
+                        analisando a segurança de aplicativos e sistemas móveis.
+                    </p>
+                    <p>Além disso, utilizei meus conhecimentos em <span class="textHighlight">DevOps</span> para criar
+                        um sistema de loja de aplicativos
+                        para
+                        Android, além de desenvolver um aplicativo desktop que instalava essa loja em dispositivos
+                        Android.
+                    </p>
+                    <p>
+                        Essa trajetória me proporcionou experiência em diversas áreas da tecnologia, permitindo que eu
+                        me
+                        adaptasse a diferentes desafios e continuasse aprendendo constantemente.</p>
                 </div>
             </div>
         </section>
-        <section id="habilidades">
-            <h1 class="text-center">Habilidades</h1>
-            <img id="lista-habilidades" src="imagens/habilidades.svg" alt="lista de habilidades do autor do portifolio Mateus Victor">
-        </section>
-        <section id="projetos">
-            <div class="container-pesquisa">
-                <div class="g-pesquisa">
-                    <input type="text" name="pesquisa" id="buscador" placeholder="Pequisar por projetos"
-                        aria-label="Pequisar por projeto">
-                    <i class="bi bi-search"></i>
-                    <i class="bi bi-funnel-fill"></i>
+        <section id="projects">
+            <div class="header">
+                <div class="sectionHeader">
+                    <h2 class="subtitle">Meus trabalhos</h2>
+                    <p>Veja os projetos em destaque</p>
+                </div>
+                <div class="projects">
+                    <project-component img-src="/imagens/beca-leito-thumbnail.jpg"
+                        title="App leitor de QR-code/Código de barras"
+                        description="Esse app tem a funcionalidade de registrar produtos nom servidor."></project-component>
+                    <project-component img-src="/imagens/sem-interface.jpg" title="Sistemas de análise de aposta"
+                        description="Esse sistema pegava dados de cotações da casa de aposta pinnacle e resultados dos últimos 10 anos de jogos de futebol e cria... "></project-component>
+                    <project-component img-src="/imagens/sem-interface.jpg" title="Robô Instagram"
+                        description="Esse sistema servia para marketing digital prospectando leaders, ele consumia a API do Instagram e seguia e curtia pessoas e..."></project-component>
+                    <project-component img-src="/imagens/lanchonete-thumbnail.jpg" title="Sistema de lanchonete"
+                        description="Sistema que server para lanchonetes cadastrarem seus produtos e terem um cardápio online, e gerir funcionários.  "></project-component>
+                    <project-component img-src="/imagens/sistema-bicho-thumbnail.jpg" title="Jogo do bicho (Freelancer)"
+                        description="Sistema que puxa os últimos resultados do jogo do bicho e analisa, qual tem mais probabilidade de sair no próximo dia"></project-component>
                 </div>
             </div>
-            <div class="container-projeto">
-                <a href="robo-derby.html" arial-label="projeto robo Derby" aria-label="projeto robo Derby">
-                    <div class="projeto proj1"></div>
-                </a>
-                <h1>Robô Derby</h1>
-                <h2>Python</h2>
-                <p>Esse robô foi um projeto criado para uma empresa que precisava de um robô que
-                    puxasse os dados de um site esportivo para uma inteligência artificial analisar
-                </p>
-            </div>
-            <div class="container-projeto">
-                <a href="robo-instagram.html" aria-label="projeto robo Instagram">
-                    <div class="projeto proj2"></div>
-                </a>
-                <h1>Robô Instagram</h1>
-                <h2>Python</h2>
-                <p>Esse robô foi criado para eu poder ganhar um dinheirinho vendendo seguidores do Instagram</p>
-            </div>
-            <div class="container-projeto">
-                <div class="projeto proj3"></div>
-                <h1>ilimita Net</h1>
-                <h2>Site</h2>
-                <p>esse foi um site que eu construir para vender serviços de internet ilimitada</p>
-                <a href="#c1" class="seta-slider r">
-                    <img class="seta-slider s" src="imagens/seta-direita verde.svg" alt="retroceder slider"
-                    aria-label="retroceder slider">
-                </a>
-                <a href="#c1" class="seta-slider l">
-                    <img class="seta-slider s" src="imagens/seta-direita verde.svg" alt="retroceder slider"
-                    aria-label="prosseguir slider">
-                </a>
-                <div class="fechar"></div>
-                <div class="info-caixa">
-                    <div class="conteudo-info">
-                        <div id="c1" class="conteudo">
-                            <h1>Figma</h1>
-                            <img class="info" src="imagens/ilimitanet-figma.jpg" alt="planejamento do site no figma">
-                            <h2>projentando a estrutura do site e o design</h2>
-                            <p>Eu comecei planejando a paleta de cor do site e em seguida o design, para me ajudar na escolha da paleta eu usei o <a href="https://color.adobe.com/pt/create" target="_blank" rel="external">adobe color</a>, e o design foi da minha criatividade mesmo</p>
-                        </div>
-                        <div id="c2" class="conteudo 2">
-                            <h1>Preparação Marketing</h1>
-                            <img class="info" src="imagens/roteiro vsl.PNG" alt="site ilimitanet">
-                            <h2>Estudos jornada do herói e copyright</h2>
-                            <p>Eu estudei um pouco de marketing digital e algumas estratégias para ajudar a vender mais, eu não sei muito sobre copy, porém eu tenho um certo dom para criar algumas, ai eu escrevi um roteiro e fui pensar nas estratégias para atrair o público</p>
-                        </div>
-                        <div id="c3" class="conteudo">
-                            <h1>photoshop</h1>
-                            <img class="info" src="imagens/photoshop ilimita.JPG" alt="site ilimitanet">
-                            <h2>artes e redes sociais</h2>
-                            <p>Eu criei a arte do zero apenas re aproveitei alguns svgs para polpar tempo o do homem e o do globo, o resto eu tive que fazer na mão</p>
-                        </div>
-                        <div id="c4" class="conteudo">
-                            <h1>PowerDirector e FL Studio</h1>
-                            <div id="carouselExampleControls" class="carousel slide vsl" data-bs-ride="carousel">
-                                <div class="carousel-inner vsl">
-                                  <div class="carousel-item">
-                                    <img src="imagens/edicao-celular.jpg" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item active">
-                                    <img src="imagens/fl-esudio1.JPG" class="d-block w-100" alt="...">
-                                  </div>
-                                  <div class="carousel-item">
-                                    <img src="imagens/fl-esudio1.JPG" class="d-block w-100" alt="...">
-                                  </div>
 
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                  <span class="carousel-control-prev-icon vls" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                  <span class="carousel-control-next-icon vls" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Next</span>
-                                </button>
-                              </div>
-                            <h2>Edição do video e do audio</h2>
-                            <p>Para editar o video eu usei o PowerDirector um editor para móbile pôs me sinto mais confortável com ele. Já para o áudio eu usei o FL Studio eu gravei o áudio com meu celular e o microfone dele está muito ruim, então eu tive que aumentar o volume e mexer em algumas outras coisinhas para melhorar a qualidade</p>
-                        </div>
-                        <div id="c5" class="conteudo">
-                            <h1>Robô do Marketing</h1>
-                            <a href="https://www.ilimitanet.tk/" target="_blank" rel="next"><img class="info" src="imagens/site-ilimitanet.jpg" alt="site ilimitanet"></a>
-                            <h2>Atrair publico</h2>
-                            <p>Depois de já ter preparado alguns conteúdos e feito a estratégia do marketing eu criei uma persona de um cliente para ser o alvo, estudei ela e criei um robô em python que me retornava um arquivo json com diversos usuários de pessoas que poderiam ter interesse em meu produto, e com esse mesmo robô eu seguia todas essas pessoas no instagram, e com menos de 50 seguidores eu consegui fazer mais de 100 reais.</p>
-                            <a href="https://www.ilimitanet.tk/" target="_blank" rel="next">
-                                <div class="ilimita"><p>Ir ao Site</p></div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        </section>
+        <section id="skills">
+            <div class="sectionHeader">
+                <h2 class="subtitle">Meus serviços</h2>
+                <p>Como posso ajudar o seu negócio</p>
+            </div>
+            <div class="services">
+                <service-component img-src="/imagens/Devices.svg" title="Websites e Aplicativos"
+                    description="Desenvolvimento de interfaces">
+                </service-component>
+                <service-component img-src="/imagens/HardDrives.svg" title="API e banco de dados"
+                    description="Criação de serviços do sistema ">
+                </service-component>
+                <service-component img-src="/imagens/Infinity.svg" title="DevOps"
+                    description="Gestão e infraestrutura da aplicação">
+
+                </service-component>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="sectionHeader">
+                <h2 class="subtitle">Contato</h2>
+                <p>Gostou do meu trabalho?</p>
+                <p class="tertiary-title">Entre em contato ou acompanhe as minhas redes sociais!</p>
+            </div>
+            <div class="contacts">
+                <contact-component img-src="/imagens/LinkedinLogo.svg" title="Linkedin" href="https://www.linkedin.com/in/mateusduart/"></contact-component>
+                <contact-component img-src="/imagens/InstagramLogo.svg" title="Instagram" href="https://www.instagram.com/mateuz_u_/"></contact-component>
+                <contact-component img-src="/imagens/GithubLogo.svg" title="Github" href="https://github.com/MateuzDuart/"></contact-component>
+                <contact-component img-src="/imagens/EnvelopeSimple.svg" title="E-mail" href="mailto:mateus_victor_@hotmail.com"></contact-component>
             </div>
         </section>
     </main>
-    <footer class="p-2 text-center">
-        <div class="row">
-            <div class="col-12 redes-sociais">
-                <a href="https://www.instagram.com/mateuz_u_" target="_blank" rel="external"><img
-                        src="imagens/Instagram-Icon.png" alt="icone do instagram"></a>
-                <a href="https://github.com/MateuzDuart" target="_blank" rel="external"><img
-                        src="imagens/github-original.svg" alt="icone do github"></a>
-                <a href="https://www.linkedin.com/in/mateus-duarte-0a0940246/" target="_blank" rel="external"><img
-                        src="imagens/linkedin-original.svg" alt="icone do linkedin"></a>
-            </div>
-            <div class="col-12">
-                <p>Email: mateus_victor_@hotmail.com <br>Numero: +55 (81)98643-7864</p>
-            </div>
-            <div class="col-12">
-                <p class="copy">&copy; Mateus Duarte</p>
-            </div>
-        </div>
-    </footer>
-    <script src="javascript/vanilla-tilt.babel.min.js"></script>
-    <script src="javascript/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
