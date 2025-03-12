@@ -28,7 +28,7 @@ body {
 }
 
 #Info .background {
-    background-image: url("imagens/Artboard\ 4grids\ 1.png");
+    background-image: url("../imagens/Artboard\ 4grids\ 1.png");
     background-size: cover;
     background-position: center;
     width: 100%;
