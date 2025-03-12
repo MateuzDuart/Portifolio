@@ -28,7 +28,7 @@ class ProfileImage extends HTMLElement {
       </style>
         <div class="image-container">
           <img width="96px" height="96px" id="profile-image" src="" alt="Imagem">
-          <img id="code" width="32px" height="32px" src="/imagens/Code.png"/>
+          <img id="code" width="32px" height="32px" src="imagens/Code.png"/>
         </div>
     `;
   }

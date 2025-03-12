@@ -45,7 +45,7 @@ class ContactComponent extends HTMLElement {
           <img width="28px" height="28px" src="" class="contact-image"/>
           <h3 class="title"></h3>
         </div>
-        <img src="/imagens/ArrowUpRight.svg" alt="Seta para diagonal" width="20px" height="20px"/>
+        <img src="imagens/ArrowUpRight.svg" alt="Seta para diagonal" width="20px" height="20px"/>
       </a>
     `;
   }
