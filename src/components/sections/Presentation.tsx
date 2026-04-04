@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Play, Pause, Clock, ChevronRight, RotateCcw, RotateCw, Gauge } from 'lucide-react'
+import { Play, Pause, Clock, ChevronRight, RotateCcw, RotateCw } from 'lucide-react'
 
 const Presentation = () => {
   const { ref, inView } = useInView({
