@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mateus Duarte - CV</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    .container {
+      width: 210mm;
+      min-height: 297mm;
+      margin: auto;
+      background: #ffffff;
+      padding: 25mm;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #0f172a;
+    }
+
+    h2 {
+      margin-top: 25px;
+      font-size: 18px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 5px;
+      color: #0f172a;
+    }
+
+    p {
+      margin: 5px 0;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 18px;
+      font-size: 14px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 13px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill {
+      background: #e2e8f0;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+
+    .btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0f172a;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+      .btn {
+        display: none;
+      }
+      .container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 20mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<button class="btn" onclick="downloadPDF()">Baixar PDF</button>
+
+<div class="container" id="cv">
+
+  <div class="header">
+    <div>
+      <h1>Mateus Duarte</h1>
+      <p><strong>Fullstack Developer</strong></p>
+      <p>Abreu e Lima - PE</p>
+    </div>
+    <div class="contact">
+      <p>Email: mateus_victor_@hotmail.com</p>
+      <p>GitHub: github.com/MateuzDuart</p>
+      <p>LinkedIn: linkedin.com/in/mateusduart</p>
+    </div>
+  </div>
+
+  <h2>Resumo</h2>
+  <p>
+    Desenvolvedor Fullstack com forte foco em backend, atuando no desenvolvimento de aplicações web, mobile e desktop. Experiência na construção de sistemas escaláveis, arquitetura de infraestrutura e otimização de performance.
+  </p>
+
+  <h2>Experiência</h2>
+
+  <p><strong>Rmelina</strong> — Fullstack Developer (2023 – 2026)</p>
+  <ul>
+    <li>Desenvolvimento da arquitetura completa de sistema de gerenciamento de dispositivos Android.</li>
+    <li>Plataforma com mais de 150 apps, 100+ usuários e 2000+ dispositivos.</li>
+    <li>Uso de React, Node.js, Rust, Kotlin e Docker.</li>
+    <li>Infraestrutura com Nginx, MySQL e VPS Ubuntu.</li>
+  </ul>
+
+  <p><strong>Vitrely</strong> — Fullstack Developer (2026)</p>
+  <ul>
+    <li>SaaS para vitrines online com mais de 25 lojas.</li>
+    <li>Stack: React, NestJS, MongoDB e Redis.</li>
+    <li>Infraestrutura com Docker, Nginx e Cloudflare.</li>
+  </ul>
+
+  <h2>Projetos</h2>
+  <p><strong>PelaMarca</strong></p>
+  <ul>
+    <li>Plataforma para organização de eventos esportivos.</li>
+    <li>Gerenciamento de pagamentos e participantes.</li>
+    <li>Stack: React, Express, PostgreSQL.</li>
+  </ul>
+
+  <h2>Educação</h2>
+  <p>
+    Formação Independente em Engenharia de Software (2020 – 2023)<br>
+    Cursos: AWS, IoT e Análise de Dados
+  </p>
+
+  <h2>Skills</h2>
+  <div class="skills">
+    <span class="skill">TypeScript</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">React</span>
+    <span class="skill">Node.js</span>
+    <span class="skill">NestJS</span>
+    <span class="skill">Docker</span>
+    <span class="skill">MongoDB</span>
+    <span class="skill">Redis</span>
+    <span class="skill">AWS</span>
+    <span class="skill">Cloudflare</span>
+  </div>
+
+  <h2>Idiomas</h2>
+  <p>Português — Nativo | Inglês — Intermediário</p>
+
+</div>
+
+<script>
+  function downloadPDF() {
+    const element = document.getElementById('cv');
+
+    const opt = {
+      margin: 0,
+      filename: 'Mateus_Duarte_CV.pdf',
+      image: { type: 'jpeg', quality: 1 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all'] }
+    };
+
+    html2pdf().set(opt).from(element).save();
+  }
+
+  // Auto-download logic
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('download')) {
+      downloadPDF();
+    }
+  }
+</script>
+
+</body>
+</html>
