@@ -120,7 +120,7 @@ const Presentation = () => {
             >
               <video
                 ref={videoRef}
-                src="/video/criar-loja.mp4"
+                src="https://storage.mateusduarte.site/criar-loja.mp4"
                 className="w-full h-full object-cover cursor-pointer"
                 onTimeUpdate={handleTimeUpdate}
                 onLoadedMetadata={handleMetadata}
