@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Layout from './components/layout/Layout'
 import Hero from './components/sections/Hero'
-import Presentation from './components/sections/Presentation'
+// import Presentation from './components/sections/Presentation'
 import About from './components/sections/About'
 import Technologies from './components/sections/Technologies'
 import Projects from './components/sections/Projects'
@@ -21,7 +21,7 @@ function App() {
   return (
     <Layout>
       <Hero />
-      <Presentation />
+      {/* <Presentation /> */}
       <About />
       <Technologies />
       <Projects />
