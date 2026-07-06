@@ -72,8 +72,8 @@ export const projects = [
 ]
 
 export const socialLinks = {
-  github: 'https://github.com/mateusduarte',
-  linkedin: 'https://linkedin.com/in/mateusduarte',
+  github: 'https://github.com/MateuzDuart/',
+  linkedin: 'https://www.linkedin.com/in/mateusduart/',
   email: 'contato@mateusduarte.site',
   resume: '/resume.pdf',
 }
