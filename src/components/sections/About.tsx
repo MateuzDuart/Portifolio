@@ -53,21 +53,7 @@ const About = () => {
               Sobre <span className="text-gradient">Mim</span>
             </h2>
             
-            <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 relative">
-              <div className="absolute -left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-600 to-transparent rounded-full opacity-30 hidden md:block" />
-              <p>
-                Sou um desenvolvedor autodidata com mais de 5 anos de experiência em tecnologias, sendo 3 anos atuando profissionalmente. Minha jornada começou explorando o "coração" das máquinas, trabalhando com 
-                <span className="text-primary-600 dark:text-primary-400 font-bold"> C++ e Rust</span> em sistemas embarcados.
-              </p>
-              <p>
-                Essa base de baixo nível me deu uma compreensão única sobre como o software interage com o hardware, o que hoje aplico na criação de 
-                arquiteturas web e mobile extremamente eficientes e escaláveis.
-              </p>
-              <p>
-                Atualmente, foco em projetos de grande impacto, como o <span className="text-gray-900 dark:text-white font-semibold italic">Rmelina</span>, 
-                onde gerencio milhares de dispositivos simultâneos, equilibrando robustez técnica com uma experiência de usuário impecável.
-              </p>
-            </div>
+            <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 relative"> <div className="absolute -left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-600 to-transparent rounded-full opacity-30 hidden md:block" /> <p> Sou um desenvolvedor autodidata com mais de 4 anos de experiência em tecnologia e 3 anos atuando profissionalmente em projetos reais. </p> <p> Minha trajetória não seguiu o caminho tradicional. Comecei aprendendo programação para resolver problemas específicos e, ao longo do tempo, expandi meus conhecimentos através de documentação, projetos, freelances e estudo contínuo. </p> <p> Essa jornada me permitiu atuar em diferentes áreas da tecnologia, desde sistemas de baixo nível e engenharia reversa até aplicações web, mobile, infraestrutura e arquitetura de software. </p> <p> Hoje meu foco está na construção de sistemas robustos, escaláveis e com impacto real para usuários e empresas. Gosto especialmente de desafios que exigem aprender rapidamente, conectar diferentes tecnologias e transformar ideias complexas em soluções práticas. </p> <p> Atualmente desenvolvo projetos próprios e soluções profissionais envolvendo <span className="text-primary-600 dark:text-primary-400 font-bold"> {" "}backend, aplicações mobile, cloud, monitoramento de dispositivos e produtos SaaS </span>, sempre buscando equilibrar qualidade técnica, experiência do usuário e visão de negócio. </p> </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
                <a 
