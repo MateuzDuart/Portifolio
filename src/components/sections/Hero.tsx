@@ -37,7 +37,7 @@ const Hero = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
               </span>
               <span className="text-xs md:text-sm font-semibold text-primary-700 dark:text-primary-300 uppercase tracking-wider">
-                Fullstack Pleno & Engenharia Reversa
+                Fullstack Pleno
               </span>
             </motion.div>
 
@@ -49,7 +49,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-xl mb-10 leading-relaxed">
               Transformando lógica em experiências excepcionais. 
               Do baixo nível com <span className="text-primary-600 dark:text-primary-400 font-bold italic">Rust e C++ </span>
-              até sistemas web escaláveis com arquiteturas modernas.
+              até sistemas web escaláveis com arquiteturas modernas com <span className="text-primary-600 dark:text-primary-400 font-bold italic">Express e Nest.js </span>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
