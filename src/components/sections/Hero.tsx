@@ -49,7 +49,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-xl mb-10 leading-relaxed">
               Transformando lógica em experiências excepcionais. 
               Do baixo nível com <span className="text-primary-600 dark:text-primary-400 font-bold italic">Rust e C++ </span>
-              até sistemas web escaláveis com arquiteturas modernas com <span className="text-primary-600 dark:text-primary-400 font-bold italic">Express e Nest.js </span>.
+              até sistemas web escaláveis com arquiteturas modernas com <span className="text-primary-600 dark:text-primary-400 font-bold italic">Express e Nest.js </span> e interface de usuário intuitiva com <span className="text-primary-600 dark:text-primary-400 font-bold italic">React e React Native</span>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -57,7 +57,7 @@ const Hero = () => {
                 onClick={scrollToPresentation}
                 className="group relative px-8 py-4 bg-primary-600 hover:bg-primary-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-primary-500/25 overflow-hidden"
               >
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2 cursor-pointer">
                   Me Conheça
                   <motion.span
                     animate={{ x: [0, 5, 0] }}

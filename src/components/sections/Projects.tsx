@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ExternalLink, Lock, Sparkles, Globe, Eye } from 'lucide-react'
+import { ExternalLink, Lock, Sparkles, Globe, Eye, ArrowUpRight } from 'lucide-react'
 import { projects, technologies } from '../../data'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
   const { ref, inView } = useInView({
@@ -48,14 +49,13 @@ const Projects = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-300/90 via-dark-300/20 to-transparent" />
-                
+
                 {/* Project Status Badge */}
                 <div className="absolute top-4 right-4">
-                  <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-md border ${
-                    project.isPrivate 
-                      ? 'bg-red-500/10 border-red-500/20 text-red-400' 
-                      : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
-                  }`}>
+                  <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur-md border ${project.isPrivate
+                    ? 'bg-red-500/10 border-red-500/20 text-red-400'
+                    : 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
+                    }`}>
                     {project.isPrivate ? <Lock size={12} /> : <Globe size={12} />}
                     <span className="text-[10px] font-black uppercase tracking-widest">
                       {project.isPrivate ? 'Privado' : 'Online'}
@@ -93,12 +93,12 @@ const Projects = () => {
 
                 {/* Highlight Box */}
                 <div className="mb-8 p-5 bg-primary-600/5 dark:bg-primary-500/10 rounded-2xl border border-primary-500/20">
-                   <div className="flex gap-3">
-                      <Sparkles size={16} className="text-primary-500 shrink-0 mt-0.5" />
-                      <p className="text-xs font-semibold text-primary-900 dark:text-primary-200 leading-normal">
-                        {project.highlight}
-                      </p>
-                   </div>
+                  <div className="flex gap-3">
+                    <Sparkles size={16} className="text-primary-500 shrink-0 mt-0.5" />
+                    <p className="text-xs font-semibold text-primary-900 dark:text-primary-200 leading-normal">
+                      {project.highlight}
+                    </p>
+                  </div>
                 </div>
 
                 {/* Links */}
@@ -126,9 +126,41 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.5 }}
+            className="text-center mt-16"
+          >
+            <Link
+              to="/projetos"
+              className="
+              inline-flex
+              items-center
+              gap-3
+
+              px-8
+              py-4
+
+              rounded-2xl
+
+              bg-primary-600
+              hover:bg-primary-700
+
+              text-white
+              font-black
+
+              transition-colors
+            "
+            >
+              Ver todos os Projetos
+              <ArrowUpRight size={18} />
+            </Link>
+          </motion.div>
       </div>
     </section>
   )
 }
 
-export default Projects
+export default Projects

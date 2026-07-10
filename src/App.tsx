@@ -1,15 +1,12 @@
 import { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
-import Hero from './components/sections/Hero'
-// import Presentation from './components/sections/Presentation'
-import About from './components/sections/About'
-import Technologies from './components/sections/Technologies'
-import Projects from './components/sections/Projects'
-import Addendum from './components/sections/Addendum'
-import Contact from './components/sections/Contact'
-import ResumeCTA from './components/sections/ResumeCTA'
+import Home from './pages/Home'
+import BlogPage from './pages/Blog'
+import ProjectsPage from './pages/Projects'
+import ProjectPage from './pages/Projects/vitrely'
 
-function App() {
+const App = () => {
   useEffect(() => {
     const saved = localStorage.getItem('theme')
     const isDark = saved === 'dark' || saved === null
@@ -20,14 +17,12 @@ function App() {
 
   return (
     <Layout>
-      <Hero />
-      {/* <Presentation /> */}
-      <About />
-      <Technologies />
-      <Projects />
-      <Addendum />
-      <Contact />
-      <ResumeCTA />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/projetos" element={<ProjectsPage />} />
+        <Route path="/projetos/vitrely" element={<ProjectPage />} />
+      </Routes>
     </Layout>
   )
 }

@@ -52,7 +52,7 @@ const Footer = () => {
           {/* "Back to Top" Action */}
           <button 
             onClick={scrollToTop}
-            className="group mb-12 flex flex-col items-center gap-2 text-xs font-bold text-gray-400 hover:text-primary-500 transition-colors"
+            className="group mb-12 flex flex-col items-center gap-2 text-xs font-bold text-gray-400 hover:text-primary-500 transition-colors cursor-pointer"
           >
             <div className="p-2 rounded-full border border-gray-100 dark:border-white/5 group-hover:border-primary-500/50 transition-all">
               <ArrowUp size={16} />
@@ -68,7 +68,7 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center gap-1.5 text-gray-500 dark:text-gray-500 font-medium">
-            Design & Codificação com <Heart size={14} className="text-red-500 fill-red-500" /> por Mateus Duarte
+            Design & Codificação por Mateus Duarte
           </div>
         </div>
       </div>
@@ -76,4 +76,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer
